@@ -17,21 +17,23 @@ This repository provides tools for analyzing creative text solutions using multi
 - Calculate creativity diversity metrics
 - Create interactive visualizations for exploration
 
-## Dataset Requirements
-
-For best results:
-
-- Include at least 10-20 text solutions (more is better)
-- Each solution should be a complete, self-contained text
-- Use a CSV file with a column containing the text solutions
-- Additional metadata columns are helpful for analysis (categories, ratings, etc.)
-
 ## Usage
 
 1. [Copy this Colab notebook](https://colab.research.google.com/drive/1ITHaNzvQi6xAgRGfmaOdAS1ky5n-VUwv?usp=sharing)
 2. Add your OpenAI API key to the environment variable
 3. Prepare your CSV file with a column containing text solutions
 4. Run the analysis (code available in the notebook)
+
+## Dataset Requirements
+
+For best results:
+
+- Include at least 10-20 text entries (more is better)
+- Each text entry to embed should be a complete, self-contained text located in a single column (ideally named text_to_embed but the code can handle any name).
+- Use a CSV file with a column containing the text solutions
+- Additional metadata columns are helpful for analysis (categories, ratings, etc.) but not used by the code right now (you can write your own custom functions if needed).
+
+
 
 ```python
 import pandas as pd
