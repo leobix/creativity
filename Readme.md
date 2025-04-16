@@ -28,11 +28,10 @@ For best results:
 
 ## Usage
 
-1. Clone this repository
-2. Install the required dependencies
-3. Add your OpenAI API key to the environment variable
-4. Prepare your CSV file with a column containing text solutions
-5. Run the analysis:
+1. [Copy this Colab notebook](https://colab.research.google.com/drive/1ITHaNzvQi6xAgRGfmaOdAS1ky5n-VUwv?usp=sharing)
+2. Add your OpenAI API key to the environment variable
+3. Prepare your CSV file with a column containing text solutions
+4. Run the analysis (code available in the notebook)
 
 ```python
 import pandas as pd
