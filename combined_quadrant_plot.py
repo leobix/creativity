@@ -126,7 +126,17 @@ def plot_panel(
             ax.fill_between(xs, ys, color=color, alpha=0.18)
 
         marker = (marker_map or {}).get(raw_label) or ("o" if is_human else "s")
-        ax.scatter([mean_val], [mean_y], color=color, edgecolors="white", linewidths=0.8, s=35, zorder=5, marker=marker)
+        marker_size = 70 if marker in {"^", "v"} else 35
+        ax.scatter(
+            [mean_val],
+            [mean_y],
+            color=color,
+            edgecolors="white",
+            linewidths=0.8,
+            s=marker_size,
+            zorder=5,
+            marker=marker,
+        )
 
         legend_entries.append(
             {
