@@ -49,7 +49,8 @@ plt.rcParams["font.sans-serif"] = ["Helvetica", "Arial", "sans-serif"]
 # ---------------------------------------------------------------------------
 
 HUMAN_COLOR = "#4D4D4D"  # HBR neutral slate
-AI_PALETTE = ["#8B1E3F", "#8B1E3F", "#8B1E3F", "#8B1E3F"]  # HBR wine red (consistent hue)
+# Darker wine-red shades, repeating mid-tone for first two plots, then darker
+AI_PALETTE = ["#8B2D45", "#8B2D45", "#6F1F35", "#521323"]
 AI_LINESTYLES = ["--", "--", "--"]  # base style; dash patterns applied below
 HUMAN_LINESTYLE = "-"
 AI_DASH_PATTERNS = [(10, 4), (4, 2), (1, 2)]  # longest dashes first
@@ -122,8 +123,7 @@ def plot_panel(
         line, = ax.plot(xs, ys, color=color, linewidth=linewidth, linestyle=linestyle)
         if dash_pattern:
             line.set_dashes(dash_pattern)
-        if is_human:
-            ax.fill_between(xs, ys, color=color, alpha=0.18)
+        ax.fill_between(xs, ys, color=color, alpha=0.18)
 
         marker = (marker_map or {}).get(raw_label) or ("o" if is_human else "s")
         marker_size = 70 if marker in {"^", "v"} else 35
